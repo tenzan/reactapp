@@ -77,7 +77,7 @@ var Inventory = React.createClass({
 
 var StorePicker = React.createClass({
 
-    mixins : [History],
+    mixins: [History],
     goToStore: function (event) {
         event.preventDefault();
         var storeId = this.refs.storeId.value;
@@ -113,7 +113,7 @@ var NotFound = React.createClass({
 var routes = (
     <Router history={createBrowserHistory()}>
         <Route path="/" component={StorePicker}/>
-        <Route path="/store/storeId" component={App}/>
+        <Route path="/store/:storeId" component={App}/>
         <Route path="*" component={NotFound}/>
     </Router>
 );
